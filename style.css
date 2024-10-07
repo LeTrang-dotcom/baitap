@@ -1,23 +1,194 @@
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    } 
+    .container{
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .about-us{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        width: 100%;
+    }
+    .img-about-us{
+        width: 100%;
+    }
+    .member-team{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(8, 309px);
+    }
+    .content-value{
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(8, 230px );
+    }
+    .menu{
+        display: none;
+    }
+    .hidden-menu{
+        width: 25%;
+        position: relative;
+        display: inline-block;
+    }
+    .drop-btn{
+        background: gray;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+    }
+    .drop-btn:hover  + .dropdown-content a{
+        color: blue;
+        display: block;
+    }
+    .drop-btn:hover + .dropdown-content a:hover{
+        color: white;
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+    .dropdown-content a{
+        display: none;
+    }
+    .hidden-menu .dropdown-content{
+        display: block;
+    }
+    .img-our-position{
+        width: 100%;
+    }
+    .our-position{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        transform: translate(10%, -90%);
+    }
+    .cols{
+        width: 100%;
+    }
+    footer{
+        margin-top: 25rem;
+    }
+}
 
-body{
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+    .content{
+        width: 1 1 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    .container{
+        padding: 10px;
+    }
+    .about-us{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        width: 100%;
+    }
+    .img-about-us{
+        width: 100%;
+    }
+    .content-value{
+        width: 80%;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 230px 230px 230px 230px;
+    }
+    .hidden-menu{
+        display: none;
+    }
     
 }
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+    .content{
+        width: 50%;
+    }
+    .hidden-menu{
+        display: none;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    body {
+        font-size: 24px;
+    }
+    
+    .content{
+        width: 50%;
+    }
+}
+
+@media (min-width: 1401px) {
+    body {
+        font-size: 30px;
+    }
+    .container{
+        max-width: 1920px;
+        padding: 50px;
+    }
+    .content{
+        width: 50%;
+    }
+    .img-about-us{
+        width: 40%;
+    }
+    .member-team{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 309px 309px;
+    }
+    .hidden-menu{
+        display: none;
+        cursor: pointer;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cols{
+        width: 80%;
+    }
+    .our-position{
+        transform: translate(10%, -180%);
+    }
+    footer{
+        margin-top: 3rem;
+    }
+}
 .container{
-    max-width: 1440px;
     margin: 0 auto;
-    padding: 30px;
     font-family: "Rubik", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 header{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .brand{
-    width: 100%;
+    width: 20%;
     display: flex;
     align-items: center;
 }
@@ -32,19 +203,16 @@ header{
     line-height: 30px;
     color: #8CC5F9;
 }
-.menu{
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-}
-.menu a{
+
+a{
     font-family: "Rubik", sans-serif;
+    font-size: 16px;
     font-weight: 700;
     line-height: 18.96px;
     text-decoration: none;
     color: #08090A;
 }
-.menu a:hover{
+a:hover{
     color:  #8CC5F9;
 }
 .language{
@@ -54,25 +222,23 @@ header{
     align-items: center;
 }
 .mr-3{
-    margin-right: 40px;
+    margin-right: 1.5rem;
 }
 .mb-3{
-    margin-bottom: 40px;
+    margin-bottom: 1.5rem;
 }
 .mt-3{
-    margin-top: 40px;
+    margin-top: 1.5rem;
 }
 .mt-6{
-    margin-top: 80px;
+    margin-top: 3rem;
 }
 .about-us{
-    font-family: "Rubik", sans-serif;
     display: flex;
     justify-content: space-around;
-    max-width: 1440px;
 }
-.content{
-    width: 50%;
+.menu{
+    width: 40%;
 }
 .content > span{
     font-size: 50px;
@@ -88,9 +254,7 @@ header{
 .content > p > span{
     color: #8CC5F9;
 }
-.img-about-us{
-    width: 40%;
-}
+
 .img-about-us svg{
     width: 100%;
     height: 100%;
@@ -109,8 +273,6 @@ header{
 .member-team{
     margin-top: 40px;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-template-rows: 309px 309px;
     gap: 30px;
     justify-content: center;
     align-content: center;
@@ -149,7 +311,7 @@ header{
     line-height: 50px;
     color: #828282;
 }
-#message{
+.message{
     width: 100vw;
     background: #FBFBFB;
 }
@@ -162,11 +324,11 @@ header{
     margin: 0 auto;
 }
 section{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background: #FBFBFB;
 }
 .message svg{
     width: 60px;
@@ -188,10 +350,7 @@ section{
     text-align: right;
 }
 .content-value{
-    width: 80%;
     display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 230px 230px 230px 230px;
     align-items: center;
     justify-items: center;
     row-gap: 143px;
@@ -225,10 +384,8 @@ section{
     align-items: center;
     z-index: 1;
     background: #FFFFFF;
-    transform: translate(10%, -180%);
 }
 .img-our-position{
-    width: 20%;
     height: 134px;
 }
 .img-our-position > svg{
@@ -278,11 +435,9 @@ footer{
     height: 563.12px;
 }
 .cols{
-    width: 80%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    
 }
 .col-1{
     width: 30%;
@@ -319,4 +474,7 @@ footer{
 .col-1 > span{
     font-family: Rubik;
     font-size: 16px;
+}
+.cols > .col-1 > .brand{
+    width: unset;
 }
