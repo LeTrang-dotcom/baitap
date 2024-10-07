@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: gray;
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            border: 10px solid white;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .circle::before{
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 10px solid blue;
+            box-sizing: border-box;
+            top: -10px;
+            left: -10px;
+            clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 50%);
+            animation: move 1s linear infinite; 
+        }
+        @keyframes move{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .loading{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .loading > div{
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        @keyframes load{
+            0%{
+                transform: translate(0);
+            }
+            100%{
+                transform: translateY(-10px);
+            }
+        }
+        .load1{
+            animation: load 3s linear infinite;
+        }
+        .load2{
+            animation: load 2s linear infinite;
+        }
+        .square{
+            width: 20px;
+            height: 20px;
+            background: red;
+            margin-top: 100px;
+            animation: squaremove 3s linear infinite;
+        }
+        @keyframes squaremove{
+            0%{
+                transform: translate(0, 0);
+            }
+            25%{
+                transform: translateY(50px);
+            }
+            50%{
+                transform: translate(50px, 50px);
+            }
+            75%{
+                transform: translate(50px, 0);
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
+        .image{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+            animation: opa 5s linear infinite;
+        }
+        @keyframes opa{
+            0%{
+                opacity: 0;
+                background-image: url("https://img4.thuthuatphanmem.vn/uploads/2020/05/13/hinh-anh-anime-nu-ngau-dep-nhat_020159971.jpg");
+                background-size: cover;
+            }
+            50%{
+                opacity: 0.5;
+                background-image: url("https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/07/anh-avatar-anime.jpg");
+                background-size: cover;
+            }
+            100%{
+                opacity: 1;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIWfTs19AXBPXuyZDLUnqRoHbkUe2Fr4Qq_A&s");
+                background-size: cover;
+            }
+        }
+        .block{
+            width: 50px;
+            height: 50px;
+            margin-top: 50px;
+        }
+        .one{
+            background: blue;
+        }
+        .two{
+            background: green;
+        }
+        .three{
+            background: yellow;
+        }
+        .block:hover{
+            transform: scale(1.5);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="loading">
+        <div class="load1"></div>
+        <div class="load2"></div>
+        <div class="load1"></div>
+        <div class="load2"></div>
+    </div>
+
+    <div class="square"></div>
+    <div class="image">
+        
+    </div>
+    <div class="many-image">
+        <div class="block one"></div>
+        <div class="block two"></div>
+        <div class="block three"></div>
+    </div>
+</body>
+</html>
