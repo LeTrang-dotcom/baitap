@@ -34,6 +34,9 @@
         position: relative;
         display: inline-block;
     }
+    .dropdown-content a{
+        display: none;
+    }
     .drop-btn{
         background: gray;
         font-size: 16px;
@@ -130,11 +133,46 @@
 
 @media (min-width: 1201px) and (max-width: 1400px) {
     body {
-        font-size: 24px;
+        font-size: 30px;
     }
-    
+    .container{
+        max-width: 1920px;
+        padding: 50px;
+    }
     .content{
         width: 50%;
+    }
+    .img-about-us{
+        width: 40%;
+    }
+    .member-team{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 309px 309px;
+    }
+    .hidden-menu{
+        display: none;
+        cursor: pointer;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cols{
+        width: 80%;
+    }
+    .our-position{
+        transform: translate(10%, -180%);
+    }
+    footer{
+        margin-top: 3rem;
+    }.member-team{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 309px);
+    }
+    .content-value{
+        width: 100%;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: repeat(4, 230px );
     }
 }
 
