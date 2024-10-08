@@ -172,7 +172,16 @@
     }
     footer{
         margin-top: 3rem;
+    }.member-team{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 309px);
     }
+    .content-value{
+        width: 100%;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: repeat(4, 230px );
+    }
+
 }
 .container{
     margin: 0 auto;
